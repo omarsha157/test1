@@ -782,9 +782,9 @@ function accordionLogic() {
 
 // ? open all accordion on mobile
 
-window.addEventListener('resize', function () {
-    openAllAccordionInMobile()
-});
+// window.addEventListener('resize', function () {
+//     openAllAccordionInMobile()
+// });
 
 function openAllAccordionInMobile() {
     if (window.innerWidth <= 760) {
