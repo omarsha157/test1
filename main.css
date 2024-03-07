@@ -458,6 +458,8 @@ td {
 .badges {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .badges img {
