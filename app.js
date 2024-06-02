@@ -295,24 +295,24 @@ tl.from('.title', { x: '-100%' }, '<0')
 tl.from('.footer', { y: '110%' })
 
 
-function isAppleDevice() {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+// function isAppleDevice() {
+//     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        return true;
-    }
+//     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+//         return true;
+//     }
 
-    if (/Macintosh|MacIntel|MacPPC|Mac68K/.test(userAgent)) {
-        return true;
-    }
+//     if (/Macintosh|MacIntel|MacPPC|Mac68K/.test(userAgent)) {
+//         return true;
+//     }
 
-    return false;
-}
+//     return false;
+// }
 
-if (isAppleDevice()) {
-    video.removeAttribute('autoplay');
-    console.log("User is using an Apple device");
-} else {
-    video.setAttribute('autoplay', '');
-    console.log("User is not using an Apple device");
-}
+// if (isAppleDevice()) {
+//     video.removeAttribute('autoplay');
+//     console.log("User is using an Apple device");
+// } else {
+//     video.setAttribute('autoplay', '');
+//     console.log("User is not using an Apple device");
+// }
