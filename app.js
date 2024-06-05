@@ -27,13 +27,13 @@ const tl = gsap.timeline({ duration: 0.3 })
 
 copyrightYear.innerText = currYear
 
-// video.addEventListener('ended', () => {
-//     video.classList.add('low-opacity')
-// })
+video.addEventListener('ended', () => {
+    video.classList.add('low-opacity')
+})
 
-// video.addEventListener('play', () => {
-//     video.classList.remove('low-opacity')
-// })
+video.addEventListener('play', () => {
+    video.classList.remove('low-opacity')
+})
 
 function decodeURL(url) {
     let decodedString = decodeURIComponent(url);
