@@ -4,198 +4,564 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>German Experts</title>
-    <link rel="icon" type="image/x-icon"
-        href="https://lh3.googleusercontent.com/-jPvW3IPZfPE/AAAAAAAAAAI/AAAAAAAAAAA/uOBF3r2eDKU/s66-p-k-no-ns-nd/photo.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./styles.v1.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
 
-    <div id="modal" class="modal">
-        <div class="modal-content">
+    <div class="nav">
+        <img class="nav-logo" src="./assets/GE_Logo.png" alt="">
+        <div class="controls">
+            <label for="auto-scroll-checkbox">Auto-Scroll</label>
+            <input type="checkbox" checked id="auto-scroll-checkbox"><br>
+            <label for="scroll-speed">Scroll Speed:</label>
+            <input type="range" id="scroll-speed" min="1" max="8" value="3">
         </div>
     </div>
 
-    <div class="grid-container">
-        <div class="grid-item">
-            <img src="./assets/gifs/01_Parts On Order.gif" alt="">
-            <p>Parts On Order</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/02 Generate Job Estimation.gif" alt="">
-            <p>Generate Job Estimation</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/03 Job Inprogress_1.gif" alt="">
-            <p>Job Inprogress</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/04_Job-Approved.gif" alt="">
-            <p>Job Approved</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/05_Assigned Team Leader.gif" alt="">
-            <p>Assigned Team Leader</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/06_Assigned-Quality-Controller.gif" alt="">
-            <p>Assigned Quality Controller</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/07_Assigned-Service-Advisor.gif" alt="">
-            <p>Assigned Service Advisor</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/08_Job-Estimation-Approval-Request.gif" alt="">
-            <p>Job Estimation Approval Request</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/09_Assigned-Partadvisor-For-Estimation.gif" alt="">
-            <p>Assigned Partadvisor For Estimation</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/10_Job-Completed-and-Invoiced.gif" alt="">
-            <p>Completed and Invoiced</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/11_Job-Estimation-Request-Approved.gif" alt="">
-            <p>Estimation Request Approved</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/12_Job-Completed-Assigned-Accounts-Department.gif" alt="">
-            <p>Job Completed Assigned Accounts Department</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/13_Job-Estimation-Request-Rejected.gif" alt="">
-            <p>Job Estimation Request Rejected</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/14_Quality-Checked-With-Note-And-Assigned-to-Service-Advisor.gif" alt="">
-            <p>Quality Checked With Note & Assigned to Service Advisor</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/15_Car Wash.gif" alt="">
-            <p>Car Wash</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/16_Ready For Delivery.gif" alt="">
-            <p>Ready For Delivery</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/17_QC In Progress.gif" alt="">
-            <p>QC In Progress</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/18_Job-Cancellation-Approval-Request.gif" alt="">
-            <p>Job Cancellation Approval Request</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/19_Job-Delivered-Parts-On-Order.gif" alt="">
-            <p>Job Delivered Parts On Order</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/20_Inspection In Progress.gif" alt="">
-            <p>Inspection In Progress</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/21_Parts-Estimate-In-Progress.gif" alt="">
-            <p>Parts Estimate In Progress</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/22_Assigned Bodyshop Estimator.gif" alt="">
-            <p>Assigned Bodyshop Estimator</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/23_Parts-Estimated-Assigned-Service-Advisor.gif" alt="">
-            <p>Parts Estimated Assigned Service Advisor</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/24_Assigned-Engine-Department.gif" alt="">
-            <p>Assigned Engine Department</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/25_Assigned-Technical-Department.gif" alt="">
-            <p>Assigned Technical Department</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/26_Assigned-Denter.gif" alt="">
-            <p>Assigned Denter</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/27_Assigned-Painter.gif" alt="">
-            <p>Assigned Painter</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/28_Assigned-Polisher.gif" alt="">
-            <p>Assigned Polisher</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/29_Waiting-For-Parts-Price.gif" alt="">
-            <p>Waiting For Parts Price</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/30_Assigned-Upholsterer.gif" alt="">
-            <p>Assigned Upholsterer</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/31_Assigned-QC-For-Observation.gif" alt="">
-            <p>Assigned QC For Observation</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/32_Parts-Estimated-Assigned-Claim-Department.gif" alt="">
-            <p>Parts Estimated Assigned Claim Department</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/33_Job Estimation In Progress.gif" alt="">
-            <p>Job Estimation In Progress</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/34_Job-Estimation.gif" alt="">
-            <p>Job Estimation</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/35_Waiting-For-Insurance-Survey.gif" alt="">
-            <p>Waiting For Insurance Survey</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/36_Waiting-For-Insurance-Approval.gif" alt="">
-            <p>Waiting For Insurance Approval</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/37_Assigned-Partadvisor-For-Ordering.gif" alt="">
-            <p>Assigned Partadvisor For Ordering</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/38_Job-Completed-Waiting-Lpo.gif" alt="">
-            <p>Job Completed Waiting Lpo</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/39_Job-Delivered-Waiting-For-Lpo.gif" alt="">
-            <p>Job Delivered Waiting For Lpo</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/40_Job-Completed-And-Invoiced-Waiting-For-Lpo.gif" alt="">
-            <p>Job Completed & Invoiced Waiting For Lpo</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/41_Assigned-Partadvisor-For-Bodyshop-Estimation.gif" alt="">
-            <p>Assigned Partadvisor For Bodyshop Estimation</p>
-        </div>
-        <div class="grid-item">
-            <img src="./assets/gifs/42_Pending-Estimation.gif" alt="">
-            <p>Pending Estimation</p>
+    <div class="table-label">
+        <p>Reqeust Stage</p>
+        <p></p>
+    </div>
+
+    <div class="main-wrapper">
+        <div class="list-container">
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/01_Parts On Order.gif" alt="">
+                    <p>Parts On Order</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-1">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/02 Generate Job Estimation.gif" alt="">
+                    <p>Generate Job Estimation</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-2">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/03 Job Inprogress_1.gif" alt="">
+                    <p>Job In progress</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-3">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/04_Job-Approved.gif" alt="">
+                    <p>Job Approved</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-4">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/05_Assigned Team Leader.gif" alt="">
+                    <p>Assigned Team Leader</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-5">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/06_Assigned-Quality-Controller.gif" alt="">
+                    <p>Assigned Quality Controller</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-6">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/07_Assigned-Service-Advisor.gif" alt="">
+                    <p>Assigned Service Advisor</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-7">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/08_Job-Estimation-Approval-Request.gif" alt="">
+                    <p>Job Estimation Approval Request</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-8">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/09_Assigned-Partadvisor-For-Estimation.gif" alt="">
+                    <p>Assigned Part Advisor For Estimation</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-9">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/10_Job-Completed-and-Invoiced.gif" alt="">
+                    <p>Job Completed and Invoiced</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-10">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/11_Job-Estimation-Request-Approved.gif" alt="">
+                    <p>Job Estimation Request Approved</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-11">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/12_Job-Completed-Assigned-Accounts-Department.gif" alt="">
+                    <p>Job Completed Assigned Accounts Department</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-12">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/13_Job-Estimation-Request-Rejected.gif" alt="">
+                    <p>Job Estimation Request Rejected</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-13">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/14_Quality-Checked-With-Note-And-Assigned-to-Service-Advisor.gif" alt="">
+                    <p>Quality Checked With Note And Assigned to Service Advisor</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-14">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/15_Car Wash.gif" alt="">
+                    <p>Car Wash</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-15">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/16_Ready For Delivery.gif" alt="">
+                    <p>Ready For Delivery</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-16">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/17_QC In Progress.gif" alt="">
+                    <p>QC In Progress</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-17">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/18_Job-Cancellation-Approval-Request.gif" alt="">
+                    <p>Job Cancellation Approval Request</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-18">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/19_Job-Delivered-Parts-On-Order.gif" alt="">
+                    <p>Job Delivered Parts On Order</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-19">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/20_Inspection In Progress.gif" alt="">
+                    <p>Inspection In Progress</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-20">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/21_Parts-Estimate-In-Progress.gif" alt="">
+                    <p>Parts Estimate In Progress</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-21">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/22_Assigned Bodyshop Estimator.gif" alt="">
+                    <p>Assigned Bodyshop Estimator</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-22">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/23_Parts-Estimated-Assigned-Service-Advisor.gif" alt="">
+                    <p>Parts Estimated Assigned Service Advisor</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-23">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/24_Assigned-Engine-Department.gif" alt="">
+                    <p>Assigned Engine Department</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-24">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/25_Assigned-Technical-Department.gif" alt="">
+                    <p>Assigned Technical Department</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-25">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/26_Assigned-Denter.gif" alt="">
+                    <p>Assigned Denter</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-26">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/27_Assigned-Painter.gif" alt="">
+                    <p>Assigned Painter</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-27">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/28_Assigned-Polisher.gif" alt="">
+                    <p>Assigned Polisher</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-28">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/29_Waiting-For-Parts-Price.gif" alt="">
+                    <p>Waiting For Parts Price</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-29">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/30_Assigned-Upholsterer.gif" alt="">
+                    <p>Assigned Upholsterer</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-30">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/31_Assigned-QC-For-Observation.gif" alt="">
+                    <p>Assigned QC For Observation</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-31">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/32_Parts-Estimated-Assigned-Claim-Department.gif" alt="">
+                    <p>Parts Estimated Assigned Claim Department</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-32">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/33_Job Estimation In Progress.gif" alt="">
+                    <p>Job Estimation In Progress</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-33">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/34_Job-Estimation.gif" alt="">
+                    <p>Job Estimation</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-34">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/35_Waiting-For-Insurance-Survey.gif" alt="">
+                    <p>Waiting For Insurance Survey</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-35">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/36_Waiting-For-Insurance-Approval.gif" alt="">
+                    <p>Waiting For Insurance Approval</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-36">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/37_Assigned-Partadvisor-For-Ordering.gif" alt="">
+                    <p>Assigned Partadvisor For Ordering</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-37">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/38_Job-Completed-Waiting-Lpo.gif" alt="">
+                    <p>Job Completed Waiting Lpo</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-38">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/39_Job-Delivered-Waiting-For-Lpo.gif" alt="">
+                    <p>Job Delivered Waiting For Lpo</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-39">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/40_Job-Completed-And-Invoiced-Waiting-For-Lpo.gif" alt="">
+                    <p>Job Completed And Invoiced Waiting For Lpo</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-40">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/41_Assigned-Partadvisor-For-Bodyshop-Estimation.gif" alt="">
+                    <p>Assigned Partadvisor For Bodyshop Estimation</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-41">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-row">
+                <div class="row-head">
+                    <img src="./assets/gifs/42_Pending-Estimation.gif" alt="">
+                    <p>Pending Estimation</p>
+                </div>
+                <div class="row-body">
+                    <div class="cards-wrapper section-42">
+
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 
-
-
-    <script src="./app.v1.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
