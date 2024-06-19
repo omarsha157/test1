@@ -46,8 +46,15 @@ const section42Out = document.querySelector('.section-42')
 
 const rowBody = document.querySelector('.row-body')
 
+const lastRefreshTime = document.querySelector('.last-refresh-time')
+
 const navSettings = document.querySelector('.nav-icon')
 const menu = document.querySelector('.controls')
+
+const allSpeedBtns = document.querySelectorAll('.s-btn')
+const lowSpeedBtn = document.querySelector('.l-s-btn')
+const midSpeedBtn = document.querySelector('.m-s-btn')
+const highSpeedBtn = document.querySelector('.h-s-btn')
 
 const copyrightYear = document.querySelector('.curr-year')
 
@@ -55,7 +62,15 @@ let currentDate = new Date();
 let currYear = currentDate.getFullYear()
 copyrightYear.innerText = currYear
 
+let hours = currentDate.getHours();
+const minutes = currentDate.getMinutes();
+const ampm = hours >= 12 ? 'PM' : 'AM';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+const minutesStr = minutes < 10 ? '0' + minutes : minutes;
 
+const timeString = hours + ':' + minutesStr + ' ' + ampm;
+lastRefreshTime.textContent = timeString;
 
 const mapObj = {
     section1: {
@@ -229,92 +244,97 @@ const mapObj = {
 }
 
 const carBrandImgMap = {
-    astonMartin : {
-        pathName : "AstonMartin",
-        assetPath:"./assets/car/aston_martin.png"
+    astonMartin: {
+        pathName: "AstonMartin",
+        assetPath: "./assets/car/aston_martin.png"
     },
-    audi : {
-        pathName : "Audi",
-        assetPath:"./assets/car/audi.png"
+    audi: {
+        pathName: "Audi",
+        assetPath: "./assets/car/audi.png"
     },
-    bentley : {
-        pathName : "Bentley",
-        assetPath:"./assets/car/bentley.png"
+    bentley: {
+        pathName: "Bentley",
+        assetPath: "./assets/car/bentley.png"
     },
-    bmw : {
-        pathName : "Bmw",
-        assetPath:"./assets/car/bmw.png"
+    bmw: {
+        pathName: "Bmw",
+        assetPath: "./assets/car/bmw.png"
     },
-    ferrari : {
-        pathName : "Ferrari",
-        assetPath:"./assets/car/ferrari.png"
+    ferrari: {
+        pathName: "Ferrari",
+        assetPath: "./assets/car/ferrari.png"
     },
-    fiat : {
-        pathName : "Fiat",
-        assetPath:"./assets/car/fiat.png"
+    fiat: {
+        pathName: "Fiat",
+        assetPath: "./assets/car/fiat.png"
     },
-    jaguar : {
-        pathName : "Jaguar",
-        assetPath:"./assets/car/jaguar.png"
+    jaguar: {
+        pathName: "Jaguar",
+        assetPath: "./assets/car/jaguar.png"
     },
-    lamborghini : {
-        pathName : "Lamborghini",
-        assetPath:"./assets/car/lamborghini.png"
+    lamborghini: {
+        pathName: "Lamborghini",
+        assetPath: "./assets/car/lamborghini.png"
     },
-    landRover : {
-        pathName : "LandRover",
-        assetPath:"./assets/car/land_rover.png"
+    landRover: {
+        pathName: "LandRover",
+        assetPath: "./assets/car/land_rover.png"
     },
-    lotus : {
-        pathName : "Lotus",
-        assetPath:"./assets/car/lotus.png"
+    lotus: {
+        pathName: "Lotus",
+        assetPath: "./assets/car/lotus.png"
     },
-    maserati : {
-        pathName : "Maserati",
-        assetPath:"./assets/car/maserati.png"
+    maserati: {
+        pathName: "Maserati",
+        assetPath: "./assets/car/maserati.png"
     },
-    maybach : {
-        pathName : "Maybach",
-        assetPath:"./assets/car/maybach.png"
+    maybach: {
+        pathName: "Maybach",
+        assetPath: "./assets/car/maybach.png"
     },
-    mclaren : {
-        pathName : "Mclaren",
-        assetPath:"./assets/car/mclaren.png"
+    mclaren: {
+        pathName: "Mclaren",
+        assetPath: "./assets/car/mclaren.png"
     },
-    mercedesBenz : {
-        pathName : "Mercedes-Benz",
-        assetPath:"./assets/car/mercedes_benz.png"
+    mercedesBenz: {
+        pathName: "Mercedes-Benz",
+        assetPath: "./assets/car/mercedes_benz.png"
     },
-    mini : {
-        pathName : "Mini",
-        assetPath:"./assets/car/mini_cooper.png"
+    mini: {
+        pathName: "Mini",
+        assetPath: "./assets/car/mini_cooper.png"
     },
-    porsche : {
-        pathName : "Porsche",
-        assetPath:"./assets/car/porsche.png"
+    porsche: {
+        pathName: "Porsche",
+        assetPath: "./assets/car/porsche.png"
     },
-    rangeRover : {
-        pathName : "RangeRover",
-        assetPath:"./assets/car/range_rover.png"
+    rangeRover: {
+        pathName: "RangeRover",
+        assetPath: "./assets/car/range_rover.png"
     },
-    rollsRoyce : {
-        pathName : "RollaRoyce",
-        assetPath:"./assets/car/rolls_royce.png"
+    rollsRoyce: {
+        pathName: "RollaRoyce",
+        assetPath: "./assets/car/rolls_royce.png"
     },
-    skoda : {
-        pathName : "Skoda",
-        assetPath:"./assets/car/skoda.png"
+    skoda: {
+        pathName: "Skoda",
+        assetPath: "./assets/car/skoda.png"
     },
-    smart : {
-        pathName : "Smart",
-        assetPath:"./assets/car/smart.png"
+    smart: {
+        pathName: "Smart",
+        assetPath: "./assets/car/smart.png"
     },
-    volksWagon : {
-        pathName : "VolksWagon",
-        assetPath:"./assets/car/volkswagen.png"
+    volksWagon: {
+        pathName: "VolksWagon",
+        assetPath: "./assets/car/volkswagen.png"
     }
 }
 
+
+// ? refresh every minute
+// setInterval(() => {
+//     location.reload()
+// }, 60000);
 
 try {
     fetch(`data.json`)
@@ -327,6 +347,7 @@ try {
 } catch (error) {
     console.log(error)
 }
+
 
 
 // ? menu
@@ -342,7 +363,7 @@ function pathToImage(filePath) {
     const fileNameWithExt = parts.pop()
     const fileName = fileNameWithExt.split(".")[0]
 
-    for(let car in carBrandImgMap) {
+    for (let car in carBrandImgMap) {
         if (carBrandImgMap[car].pathName == fileName) {
             return carBrandImgMap[car].assetPath
         }
@@ -425,7 +446,7 @@ function applyAnimation(sectionName, NoOfCards) {
 // ? vertical scroll
 
 let direction = 'down'; // Initial direction
-let scrollAmount = 3;
+let scrollAmount = 1;
 let scrollInterval = 20; // Interval between scrolls in milliseconds
 let autoScrollInterval;
 
@@ -465,9 +486,35 @@ document.getElementById('auto-scroll-checkbox').addEventListener('change', funct
     }
 });
 
-document.getElementById('scroll-speed').addEventListener('input', function () {
-    scrollAmount = parseInt(this.value);
-});
+
+// document.getElementById('scroll-speed').addEventListener('input', function () {
+//     scrollAmount = parseInt(this.value);
+// });
+
+// ? scroll speed btns
+
+lowSpeedBtn.addEventListener('click', () => {
+    scrollAmount = 1
+    scrollInterval = 55
+})
+midSpeedBtn.addEventListener('click', () => {
+    scrollAmount = 1
+    scrollInterval = 20
+})
+highSpeedBtn.addEventListener('click', () => {
+    scrollAmount = 2
+    scrollInterval = 20
+})
+
+allSpeedBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        allSpeedBtns.forEach(btn => btn.classList.remove('active'))
+
+        btn.classList.add('active')
+        stopAutoScroll()
+        startAutoScroll()
+    })
+})
 
 startAutoScroll()
 

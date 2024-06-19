@@ -19,19 +19,24 @@
         </div>
         <div class="refresh-time">
             <img src="./assets/noun-refresh-time-6139788 mod.png" alt="">
-            <p>02:30 PM</p>
+            <p class="last-refresh-time"></p>
         </div>
         <img class="nav-icon" src="./assets/settings.png" alt="">
     </div>
 
-    <div class="controls">
-        <div>
+    <div class="controls drop-down">
+        <div class="auto-scroll-div">
             <label for="auto-scroll-checkbox">AUTO-SCROLL</label>
             <input type="checkbox" checked id="auto-scroll-checkbox">
         </div>
-        <div>
+        <div class="scroll-speed-div">
             <label for="scroll-speed">SCROLL SPEED</label>
-            <input type="range" id="scroll-speed" min="1" max="8" value="3">
+            <!-- <input type="range" id="scroll-speed" min="1" max="8" value="1"> -->
+            <div class="speed-btns">
+                <div class="s-btn l-s-btn">Low</div>
+                <div class="s-btn m-s-btn active">Mid</div>
+                <div class="s-btn h-s-btn">High</div>
+            </div>
         </div>
     </div>
 
