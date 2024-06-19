@@ -338,6 +338,7 @@ input:checked[type="checkbox"]::after {
 }
 
 .clock-icon {
+    transform: translateY(-1px);
     width: 12px;
 }
 
