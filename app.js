@@ -332,9 +332,9 @@ const carBrandImgMap = {
 
 
 // ? refresh every minute
-// setInterval(() => {
-//     location.reload()
-// }, 60000);
+setInterval(() => {
+    location.reload()
+}, 60000);
 
 try {
     fetch(`data.json`)
