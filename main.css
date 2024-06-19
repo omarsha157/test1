@@ -331,6 +331,7 @@ input:checked[type="checkbox"]::after {
     position: fixed;
     bottom: 0px;
     font-size: 12px;
+    z-index: 99;
 }
 
 .copyright a {
