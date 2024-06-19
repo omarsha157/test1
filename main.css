@@ -13,6 +13,8 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* ? navbar */
+
 .nav {
     padding: 0 10%;
     width: 100%;
@@ -25,21 +27,140 @@ body {
     top: 0;
     z-index: 99;
 
+    display: grid;
+    grid-template-columns: 200px 1fr 100px 100px 20px;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 120px;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    justify-self: center;
+}
+
+.branch-logo {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    /* gap: 5px; */
+}
+
+.branch-logo img {
+    padding-right: 20px;
+    width: 100px;
+}
+
+.refresh-time {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.refresh-time img {
+    width: 14px;
+}
+
+.nav-icon {
+    width: 20px;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.nav-icon:hover {
+    transform: rotateZ(44deg);
+}
+
+.nav-icon:active {
+    opacity: 0.5;
+}
+
+.controls {
+    padding: 5px 5px;
+    height: 80px;
+    width: 150px;
+
+    background-color: white;
+    box-shadow: 0px 0px 4px rgb(136, 136, 136);
+
+    position: fixed;
+    top: 60px;
+    right: 10%;
+    z-index: 98;
+
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(88, 88, 88);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    transform: translateY(-100px);
+    transition: all 0.8s;
+}
+
+.controls.drop-down {
+    transform: translateY(0);
+}
+
+.controls div:first-child {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.nav-logo {
-    width: 100px;
+.controls div:first-child label, .controls div:first-child input, .controls div:nth-child(2) input {
+    cursor: pointer;
 }
 
-.controls {
+.controls div:nth-child(2) {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 5px;
 }
 
+input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    width: 25px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 50px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+input:checked[type="checkbox"] {
+    background: #0067e1;
+}
+
+input[type="checkbox"]::after {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5) inset;
+    transition: 0.4s;
+}
+
+input:checked[type="checkbox"]::after {
+    left: 53%;
+}
+
+
+/* ? main body */
 
 .table-label {
     margin-top: 80px;
@@ -54,8 +175,11 @@ body {
 }
 
 .table-label p:first-child {
-    padding: 8px;
     border-right: var(--border-size) solid var(--border-clr);
+}
+
+.table-label p {
+    padding: 8px;
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
@@ -64,7 +188,7 @@ body {
 
 .main-wrapper {
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .list-container {
@@ -79,7 +203,7 @@ body {
 .d-row {
     display: flex;
     flex-direction: row;
-    height: 150px;
+    height: 120px;
     /* Set height to 100px */
     border-bottom: var(--border-size) solid var(--border-clr);
 }
@@ -134,26 +258,26 @@ body {
 
 
 .card {
-    margin: 5px 10px;
+    margin: 5px 7px;
     padding: 0 10px;
 
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: 220px;
-    height: 120px;
+    flex-basis: 180px;
+    height: 100px;
 
     border-radius: 8px;
 
     display: flex;
     flex-direction: column;
 
-    box-shadow: 2px 2px 4px rgba(82, 82, 82, 0.5);
+    box-shadow: 2px 2px 4px rgba(82, 82, 82, 0.3);
     color: rgba(0, 0, 0, 0.7);
     position: relative;
 }
 
 .card .bg-ele {
-    width: 30px;
+    width: 27px;
 
     position: absolute;
     right: 0px;
@@ -175,7 +299,7 @@ body {
 }
 
 .car-logo {
-    width: 60px;
+    width: 70px;
     height: 60px;
     object-fit: contain;
 }
@@ -192,4 +316,23 @@ body {
 
 .clock-icon {
     width: 12px;
+}
+
+
+
+
+.copyright {
+    padding-bottom: 3px;
+    background-color: white;
+    box-shadow: 0px 3px 4px rgb(84, 84, 84);
+
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    font-size: 12px;
+}
+
+.copyright a {
+    color: unset;
 }

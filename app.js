@@ -46,6 +46,16 @@ const section42Out = document.querySelector('.section-42')
 
 const rowBody = document.querySelector('.row-body')
 
+const navSettings = document.querySelector('.nav-icon')
+const menu = document.querySelector('.controls')
+
+const copyrightYear = document.querySelector('.curr-year')
+
+let currentDate = new Date();
+let currYear = currentDate.getFullYear()
+copyrightYear.innerText = currYear
+
+
 
 const mapObj = {
     section1: {
@@ -218,6 +228,93 @@ const mapObj = {
     }
 }
 
+const carBrandImgMap = {
+    astonMartin : {
+        pathName : "AstonMartin",
+        assetPath:"./assets/car/aston_martin.png"
+    },
+    audi : {
+        pathName : "Audi",
+        assetPath:"./assets/car/audi.png"
+    },
+    bentley : {
+        pathName : "Bentley",
+        assetPath:"./assets/car/bentley.png"
+    },
+    bmw : {
+        pathName : "Bmw",
+        assetPath:"./assets/car/bmw.png"
+    },
+    ferrari : {
+        pathName : "Ferrari",
+        assetPath:"./assets/car/ferrari.png"
+    },
+    fiat : {
+        pathName : "Fiat",
+        assetPath:"./assets/car/fiat.png"
+    },
+    jaguar : {
+        pathName : "Jaguar",
+        assetPath:"./assets/car/jaguar.png"
+    },
+    lamborghini : {
+        pathName : "Lamborghini",
+        assetPath:"./assets/car/lamborghini.png"
+    },
+    landRover : {
+        pathName : "LandRover",
+        assetPath:"./assets/car/land_rover.png"
+    },
+    lotus : {
+        pathName : "Lotus",
+        assetPath:"./assets/car/lotus.png"
+    },
+    maserati : {
+        pathName : "Maserati",
+        assetPath:"./assets/car/maserati.png"
+    },
+    maybach : {
+        pathName : "Maybach",
+        assetPath:"./assets/car/maybach.png"
+    },
+    mclaren : {
+        pathName : "Mclaren",
+        assetPath:"./assets/car/mclaren.png"
+    },
+    mercedesBenz : {
+        pathName : "Mercedes-Benz",
+        assetPath:"./assets/car/mercedes_benz.png"
+    },
+    mini : {
+        pathName : "Mini",
+        assetPath:"./assets/car/mini_cooper.png"
+    },
+    porsche : {
+        pathName : "Porsche",
+        assetPath:"./assets/car/porsche.png"
+    },
+    rangeRover : {
+        pathName : "RangeRover",
+        assetPath:"./assets/car/range_rover.png"
+    },
+    rollsRoyce : {
+        pathName : "RollaRoyce",
+        assetPath:"./assets/car/rolls_royce.png"
+    },
+    skoda : {
+        pathName : "Skoda",
+        assetPath:"./assets/car/skoda.png"
+    },
+    smart : {
+        pathName : "Smart",
+        assetPath:"./assets/car/smart.png"
+    },
+    volksWagon : {
+        pathName : "VolksWagon",
+        assetPath:"./assets/car/volkswagen.png"
+    }
+}
+
 
 try {
     fetch(`data.json`)
@@ -229,6 +326,27 @@ try {
         .catch(error => console.log(error))
 } catch (error) {
     console.log(error)
+}
+
+
+// ? menu
+navSettings.addEventListener('click', () => {
+    menu.classList.toggle('drop-down')
+})
+
+
+// ? populate brand images in card
+
+function pathToImage(filePath) {
+    const parts = filePath.split("/");
+    const fileNameWithExt = parts.pop()
+    const fileName = fileNameWithExt.split(".")[0]
+
+    for(let car in carBrandImgMap) {
+        if (carBrandImgMap[car].pathName == fileName) {
+            return carBrandImgMap[car].assetPath
+        }
+    }
 }
 
 
@@ -248,7 +366,7 @@ function populateData(data) {
                         <div class="card-header">
                             <p class="plate-no">${data[section].plateNoNew}</p>
                             <div class="car-logo">
-                                <img class="car-logo" src="./assets/car/aston_martin.png">
+                                <img class="car-logo" src=${pathToImage(data[section].vehicleBrandNew)} onerror="this.src='./assets/Empty.png'" >
                             </div>
                         </div>
                         <div class="time-lapsed-container">
@@ -370,3 +488,5 @@ allCardWrapper.forEach(wrapper => {
         this.style.animationPlayState = '';
     });
 })
+
+
