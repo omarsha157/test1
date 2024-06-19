@@ -376,9 +376,9 @@ function populateData(data) {
                     </div>
                 `
 
-                if (Outdiv.children.length * 230 > rowBody.offsetWidth) {
+                if (Outdiv.children.length * 184 > rowBody.offsetWidth) {
                     mapObj[mapName].outputDiv.classList.add('animate')
-                    createKeyframeAnimation(Outdiv.children.length * 230, Outdiv.children.length, mapName)
+                    createKeyframeAnimation(Outdiv.children.length * 184, Outdiv.children.length, mapName)
                 }
 
             }
