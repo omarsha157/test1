@@ -973,33 +973,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     function createKeyframeAnimation(totalWidth, NoOfCards, sectionName) {
 
-                            const keyframes = `
-                            @keyframes ${sectionName + "Scroll"} {
-                                0% {
-                                    left: 0;
-                                }
-                                50% {
-                                    left: calc(100% - ${totalWidth + (NoOfCards * 10)}px);
-                                }
-                                100% {
-                                    left: 0;
-                                }
-                            }
-                        `;
-
-                        // const keyframes = `
+                        //     const keyframes = `
                         //     @keyframes ${sectionName + "Scroll"} {
                         //         0% {
-                        //             transform: translateX(100px);
+                        //             left: 0;
                         //         }
                         //         50% {
-                        //             transform: translateX(calc(100% - ${totalWidth + (NoOfCards * 10)}px));
+                        //             left: calc(100% - ${totalWidth + (NoOfCards * 10)}px);
                         //         }
                         //         100% {
-                        //             transform: translateX(100px);
+                        //             left: 0;
                         //         }
                         //     }
                         // `;
+
+                        const keyframes = `
+                            @keyframes ${sectionName + "Scroll"} {
+                                0% {
+                                    transform: translateX(50px);
+                                }
+                                50% {
+                                    transform: translateX(calc(100% - ${totalWidth + (NoOfCards * 10)}px));
+                                }
+                                100% {
+                                    transform: translateX(50px);
+                                }
+                            }
+                        `;
 
                         const styleSheet = document.createElement("style");
                         styleSheet.type = "text/css";
