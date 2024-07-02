@@ -1011,7 +1011,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
 
                     function applyAnimation(sectionName, NoOfCards) {
-                        mapObj[sectionName].outputDiv.style.animation = `${sectionName + "Scroll"} ${NoOfCards * 5}s linear infinite`;
+                        mapObj[sectionName].outputDiv.style.animation = `${sectionName + "Scroll"} ${NoOfCards * 15}s linear infinite`;
                     }
 
                     // ? pause horizontal scroll on hover
