@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-purchase Inspection Report</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://lh3.googleusercontent.com/-jPvW3IPZfPE/AAAAAAAAAAI/AAAAAAAAAAA/uOBF3r2eDKU/s66-p-k-no-ns-nd/photo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@5.000;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./viewer.css">
+    <link rel="stylesheet" href="./styles.v1.0.16.css">
+</head>
+
+<body>
+
+    <div class="loading ">
+        <img src="./assets/logo_animation.gif" alt="">
+    </div>
+
+    <div class="error hide">
+        <div class="error-content">
+            <img class="error-logo" src="./assets/GE_Logo.png" alt="">
+            <div>
+                <img src="./assets/warning_sign_gradient_shine.png" alt="">
+                <p>Something went wrong</p>
+                <p>Contact Administrator</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ? modal -->
+
+    <div class="pop-up-modal hide">
+        <img class="logo" src="./assets/GE Logo_Horizontal Version white.png" alt="">
+
+        <div class="modal-content">
+            <img class="modal-close-btn" src="./assets/close.svg" alt="">
+            <p class="modal-info">Link Updated In Pre purchase Inspection Report</p>
+            <p class="customer-link"></p>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+
+        <div class="nav">
+            <img class="nav-logo" src="./assets/GE_Logo.png" alt="">
+            <p>PRE PURCHASE INSPECTION REPORT</p>
+            <div class="generate-link-btn btn hide">Generate Link</div>
+            <div class="view-link-btn btn hide">View Link</div>
+        </div>
+
+        <section class="hero">
+
+
+
+            <div class="hero-img-box pt-1">
+                <div class="main-img-box">
+                    <video class="video-play" muted controls controlsList="nodownload" oncontextmenu="return false;" >
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <!-- <img src="./assets/GE_DXB.png" alt=""> -->
+                </div>
+
+                <div class="details-and-rating">
+                    <div class="car-details">
+                        <img class="car-brand-img" src="" alt="">
+
+                        <div>
+
+                            <div class="year-model">
+                                <p class="car-brand"></p>
+                                <p class="car-model"></p>
+                                <p class="car-year"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="overall-rating-box">
+                        <div id="star-container" class="star-rating"></div>
+                        <!-- <div class="star-rating">
+                                <p>★</p>
+                                <p>★</p>
+                                <p>★</p>
+                                <p>★</p>
+                            </div> -->
+                        <p class="overall-rating-number"></p>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <p class="sub-title">Inspection Overveiw</p>
+
+            <div class="overview-box">
+
+                <div class="overview-1">
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Engine Compartment</p>
+                            <p class="overview-percentage-text engine-compartment-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent engine-compartment-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Transmission</p>
+                            <p class="overview-percentage-text transmission-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent transmission-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Electrical Controls</p>
+                            <p class="overview-percentage-text electrical-controls-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent electrical-controls-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Brake System</p>
+                            <p class="overview-percentage-text brake-system-percentage-text">70%</p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent brake-system-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Front Suspenion</p>
+                            <p class="overview-percentage-text front-suspension-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent front-suspension-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Rear Suspension</p>
+                            <p class="overview-percentage-text rear-suspension-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent rear-suspension-percentage"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="overview-2">
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Steering</p>
+                            <p class="overview-percentage-text steering-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent steering-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Interior</p>
+                            <p class="overview-percentage-text interior-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent interior-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Underbody</p>
+                            <p class="overview-percentage-text under-body-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent under-body-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Fuel System</p>
+                            <p class="overview-percentage-text fuel-system-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent fuel-system-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Exterior</p>
+                            <p class="overview-percentage-text exterior-percentage-text">70%</p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent exterior-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Wheels and Tyres</p>
+                            <p class="overview-percentage-text wheels-and-tyres-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent wheels-and-tyres-percentage"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="overview-3">
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Exhaust System</p>
+                            <p class="overview-percentage-text exhaust-system-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent exhaust-system-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Drivetrain</p>
+                            <p class="overview-percentage-text drive-train-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent drive-train-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Suspension</p>
+                            <p class="overview-percentage-text suspension-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent suspension-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">OBD-Diagnostics Codes</p>
+                            <p class="overview-percentage-text obd-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent obd-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">AC System</p>
+                            <p class="overview-percentage-text ac-system-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent ac-system-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="each-overview">
+                        <div class="overview-title-box">
+                            <p class="overview-title">Road Test and Final Checks</p>
+                            <p class="overview-percentage-text road-test-percentage-text"></p>
+                        </div>
+                        <div class="overview-percent-box">
+                            <div class="overview-percent road-test-percentage"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <section>
+            <p class="sub-title">Vehicle Details</p>
+
+            <div class="vd-box pt-1">
+
+                <div class="vd-list">
+
+                    <div>
+                        <div>
+                            <p class="vd-make"></p>
+                            <p>Make</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <p class="vd-model"></p>
+                            <p>Model</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <p class="vd-year"></p>
+                            <p>Year</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <p class="vd-registered-emirates"></p>
+                            <p>Registered Emirates</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <p class="vd-fuel"></p>
+                            <p>Fuel Type</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <p class="vd-plate"></p>
+                            <p>Plate Number</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <p class="vd-kms"></p>
+                            <p>Odometer Reading</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <p class="vd-vin"></p>
+                            <p>Chassis/VIN</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <p class="vd-cylinders"></p>
+                            <p>Engine no. of cylinders</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="inspection-section">
+            <p class="sub-title">Inspection Details</p>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Engine Compartment</p>
+                        <div class="header-end">
+                            <p class="engine-compartment-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="engine-compartment-bg accordion-bg"></div>
+
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>Check Bonnet Lock, Switch And Cable</p>
+                                    <p class="chk-bonnet-lock-switch-cable"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>All Hoses Cracks,Damages And Leaks</p>
+                                    <p class="all-hoses-crack-damages-leaks"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Filters And Spark Plugs</p>
+                                    <p class="filters-and-spark-plugs"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Ancillary Components Condition</p>
+                                    <p class="ancillary-component-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Coolant Pump External Condition And Faults</p>
+                                    <p class="coolant-pump-external-condition-and-faults"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Radiator Fan Function And Condition</p>
+                                    <p class="radiator-fan-function-and-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Engine Oil Level And Condition</p>
+                                    <p class="engine-oil-level-and-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Engine Wiring Harness Overall Condition</p>
+                                    <p class="engine-wiring-harness-overall-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Compression Test Result</p>
+                                    <p class="compression-test-result"></p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="insp-box">
+                                    <p>Turbo And Super Charger Condition</p>
+                                    <p class="turbo-and-super-charger-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Engine Fault</p>
+                                    <p class="no-engine-fault"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Engine Performance At Idle</p>
+                                    <p class="engine-performance-at-idle"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>V-Belt,Idler Pulleys And Tensioner Condition</p>
+                                    <p class="v-belt-idler-pulley-and-tensioner-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Engine Noise</p>
+                                    <p class="no-engine-noise"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Engine Mount Condition</p>
+                                    <p class="engine-mount-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Check Coolant Circuit</p>
+                                    <p class="check-coolant-circuit"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Windscreen Washer Fluid Level And Reservoir Cap</p>
+                                    <p class="windscreen-washer-fluid-level-and-reservoir-cap"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Engine Condition</p>
+                                    <p class="engine-condition"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="pt-1">Remarks:</p>
+                            <p class=" pt-025 pb-1 engine-compartment-remark"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Transmisson</p>
+                        <div class="header-end">
+                            <p class="transmission-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="transmission-bg accordion-bg"></div>
+
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>Transmission Mount Condition</p>
+                                    <p class="transmission-mount-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Transmission Housing Condition</p>
+                                    <p class="transmission-housing-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Transmission Oil Condition</p>
+                                    <p class="transmission-oil-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Transmission Faults</p>
+                                    <p class="no-transmission-faults"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Transmission Condition</p>
+                                    <p class="transmission-condition"></p>
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="pt-1">Remarks:</p>
+                            <p class=" pt-025 pb-1 transmission-remarks">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Electrical Controls</p>
+                        <div class="header-end">
+                            <p class="electrical-controls-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="electrical-bg accordion-bg"></div>
+
+                        <div class="insp-wrapper pt-1">
+
+
+                            <div>
+                                <div class="insp-box">
+                                    <p>Switches Condition</p>
+                                    <p class="switches-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>All Seat Adjustment Functionality</p>
+                                    <p class="all-seat-adjustment-functionality"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Gear Shifter Function And Condition</p>
+                                    <p class="gear-shifter-function-and-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Battery Test Result</p>
+                                    <p class="battery-test-result"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Side Mirrors Adjustment Function</p>
+                                    <p class="side-mirrors-adjustment-function"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Steering Wheel Adjustment Function And
+                                        Condition</p>
+                                    <p class="steering-wheel-adjustment-function-and-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Interior Electronics And System Functionality</p>
+                                    <p class="interior-electronics-and-system-functionality"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>All Lights Function</p>
+                                    <p class="all-lights-function"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Infotainment System Function And
+                                        Condition</p>
+                                    <p class="infotainment-system-function-and-condition"></p>
+                                </div>
+                            </div>
+
+                            <div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Brake System</p>
+                        <div class="header-end">
+                            <p class="brake-system-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="brakes-bg accordion-bg"></div>
+
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>Parking Brake Functionality</p>
+                                    <p class="parking-brake-functionality"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Front Brake Pad Thickness
+                                    </p>
+                                    <p class="front-brake-pad-thickness"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Front And Rear Brake Disc Thickness</p>
+                                    <p class="front-and-rear-brake-disc-thickness"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Rear Brake Pad Thickness</p>
+                                    <p class="rear-brake-pad-thickness"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Brake Lines And Brake Calipers Condition</p>
+                                    <p class="brake-lines-and-brake-calipers-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Brake Fluid Level, Reservoir And Cap Check</p>
+                                    <p class="brake-fluid-level-reservoir-and-cap-check"></p>
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Front Suspension</p>
+                        <div class="header-end">
+                            <p class="front-suspension-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="suspension-bg accordion-bg"></div>
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>Front Sub Frame,Fixing And Condition</p>
+                                    <p class="front-sub-frame-fixing-and-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Front Arms,Suspension Stabilizer Bar,Links And Bushes
+                                    </p>
+                                    <p class="front-arms-suspension-stabilizers-bar-link-and-bushes"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Front Suspension Struts, Mounts And Springs</p>
+                                    <p class="front-suspension-struts-mounts-and-springs"></p>
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Rear Suspension</p>
+                        <div class="header-end">
+                            <p class="rear-suspension-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="suspension-bg accordion-bg"></div>
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>Rear Sub Frame Fixing And Condition</p>
+                                    <p class="rear-sub-frame-fixing-and-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Rear Arms, Suspension Stabilizer Bar,Links And Bushes
+                                    </p>
+                                    <p class="rear-arms-suspension-stabilizer-bar-links-and-bushes"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Rear Suspension Structs, Shocks And Springs</p>
+                                    <p class="rear-suspension-structs-shocks-and-springs"></p>
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Steering</p>
+                        <div class="header-end">
+                            <p class="steering-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="steering-bg accordion-bg"></div>
+
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>Power Steering Fluid Level,Quality And
+                                        Reservoir Cap</p>
+                                    <p class="power-steering-fluid-level-quality-and-reservoir-cap"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Steering Tierods, Rack, Gaiters Integrity/Play, Noise And Leak Check</p>
+                                    <p class="steering-tierods-racks-gaiters-integrity-play-noise-and-leak-check"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Check Power Steering Pump, Hoses Leaks</p>
+                                    <p class="check-power-steering-pump-hoses-leaks"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Eps Fault And Server Motor Noise</p>
+                                    <p class="no-eps-fault-and-server-motor-noise"></p>
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Interior</p>
+                        <div class="header-end">
+                            <p class="interior-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="interior-bg accordion-bg"></div>
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>Warning Lights On Esc,Airbag And Mil
+                                    </p>
+                                    <p class="warning-lights-on-esc-airbag-and-mil"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>All Seat Belt Condition And Functionality
+                                    </p>
+                                    <p class="all-seat-belt-condition-and-functionality"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Child Lock Function</p>
+                                    <p class="child-lock-function"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Vehicle Interior Condition</p>
+                                    <p class="vehicle-interior-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Refrigeration Box Function And Condition</p>
+                                    <p class="refrigeration-box-function-and-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Panoramic Sunroof Condition And
+                                        Function
+                                    </p>
+                                    <p class="panaromic-sunroof-condition-and-function"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Rear Sunshade Curtain Function And
+                                        Condition
+                                    </p>
+                                    <p class="rear-sunshade-curtain-function-and-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Bonnet Release Handle Function And
+                                        Condition</p>
+                                    <p class="bonnet-release-handle-function-and-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Starting Function</p>
+                                    <p class="starting-function"></p>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <div class="insp-box">
+                                    <p>Unauthorized Modification Found</p>
+                                    <p class="no-unauthorized-modification-found"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Wind Screen Wiper Blade And Washer
+                                        Control System
+                                    </p>
+                                    <p class="wind-screen-wiper-blade-and-washer-control-system"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Glove Box,Perfume Atomizer Function And
+                                        Condition
+                                    </p>
+                                    <p class="glove-box-perfume-atomizer-function-and-condition"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Underbody</p>
+                        <div class="header-end">
+                            <p class="under-body-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="underbody-bg accordion-bg"></div>
+
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>Signs Of Oil Leaks</p>
+                                    <p class="no-signs-of-oil-leaks"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Signs Of Coolant Leaks
+                                    </p>
+                                    <p class="no-signs-of-coolant-leaks"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Underbody Covers,Heat Shields And Running
+                                        Board Fixing And Condition</p>
+                                    <p class="underbody-covers-heat-shields-and-running-board-fixing-and-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Front And Rear Bumpers, Under Panels
+                                        Condition</p>
+                                    <p class="front-and-rear-bumpers-under-panels-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Wheel Housing Covers Condition
+                                    </p>
+                                    <p class="wheel-housing-covers-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Chassis Condition</p>
+                                    <p class="chassis-condition"></p>
+                                </div>
+
+
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="pt-1">Remarks:</p>
+                            <p class=" pt-025 pb-1 underbody-remarks"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Fuel System</p>
+                        <div class="header-end">
+                            <p class="fuel-system-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="fuel-bg accordion-bg"></div>
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>Fuel System Pump,Lines,Rails And Injectors
+                                        Condition</p>
+                                    <p class="fuel-system-pump-lines-rails-and-injectors-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Fuel Tank And Fuel Lines Condition</p>
+                                    <p class="fuel-tank-and-fuel-lines-condition"></p>
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Exterior</p>
+                        <div class="header-end">
+                            <p class="exterior-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="exterior-bg accordion-bg"></div>
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>All Exterior Lights Physical Condition
+                                    </p>
+                                    <p class="all-exterior-lights-physical-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>All Side Mirror Housing And Glass Condition</p>
+                                    <p class="all-side-mirror-housing-and-glass-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Convertible Soft Top Condition</p>
+                                    <p class="convertible-soft-top-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Windscreen And Windshield Glass Condition</p>
+                                    <p class="windscreen-and-windshield-glass-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Body Modification And
+                                        Customisation</p>
+                                    <p class="no-body-modification-and-customisation"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>All Door Handle Open Close
+                                        Functionality</p>
+                                    <p class="all-door-handle-open-close-functionality"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Scratch</p>
+                                    <p class="no-scratch"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Faded
+                                    </p>
+                                    <p class="faded"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Foil Wrap And Paint Protection Film Condition</p>
+                                    <p class="foil-wrap-and-paint-protection-film-condition"></p>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <div class="insp-box">
+                                    <p>Fuel Lid Correctly Locking And Unlocking</p>
+                                    <p class="fuel-lid-correctly-locking-and-unlocking"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Automatic Trunk Lid Opening And Closing
+                                        Function</p>
+                                    <p class="automatic-trunk-lid-opening-and-closing-function"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Head Lights Washer System Function And
+                                        Condition
+                                    </p>
+                                    <p class="head-light-washer-system-function-and-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Dent
+                                    </p>
+                                    <p class="no-dent"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Re-Painted
+                                    </p>
+                                    <p class="re-painted"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Paint Bubble And Rust
+                                    </p>
+                                    <p class="no-paint-bubble-and-rust"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Wheels and Tyres</p>
+                        <div class="header-end">
+                            <p class="wheels-and-tyres-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="wheels-tyres-bg accordion-bg"></div>
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>All Rim Condition
+                                    </p>
+                                    <p class="all-rim-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>All Tires Have The Same Brand</p>
+                                    <p class="all-tires-have-the-same-brand"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Tyre Front Left Thread Depth And Evenness
+                                    </p>
+                                    <p class="tyre-front-left-thread-depth-and-evenness"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Tyre Rear Left Thread Depth And Evenness</p>
+                                    <p class="tyre-rear-left-thread-depth-and-evenness"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Tyre Front Right Thread Depth And Evenness</p>
+                                    <p class="tyre-front-right-thread-depth-and-evenness"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Tyre Rear Right Thread Depth And Evenness
+                                    </p>
+                                    <p class="tyre-rear-right-thread-depth-and-evenness"></p>
+                                </div>
+
+
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Exhaust System</p>
+                        <div class="header-end">
+                            <p class="exhaust-system-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="exhaust-bg accordion-bg"></div>
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>Exhaust System Condition
+                                    </p>
+                                    <p class="exhaust-system-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Exhaust System Modification Found</p>
+                                    <p class="no-exhaust-modification-found"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Exhaust System Flap Condition</p>
+                                    <p class="exhaust-system-flap-condition"></p>
+                                </div>
+
+
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Drivetrain</p>
+                        <div class="header-end">
+                            <p class="drive-train-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="drivetrain-bg accordion-bg"></div>
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>Axle Shafts, Gaiters And Cv Joints Condition
+                                    </p>
+                                    <p class="axle-shafts-gaiters-and-cv-joints-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Front Differential Oil Condition</p>
+                                    <p class="front-differential-oil-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Check Front And Rear Differential Mounts</p>
+                                    <p class="check-front-and-rear-differential-mounts"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Rear Differential Oil Condition
+                                    </p>
+                                    <p class="rear-differential-oil-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Propeller Shaft And Flex Disks Condition
+                                    </p>
+                                    <p class="propeller-shaft-and-flex-disks-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Center Support Bearing (Automatic
+                                        Transmission)
+                                    </p>
+                                    <p class="center-support-bearing-automatic-transmission"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Transfer Case Oil Condition
+                                    </p>
+                                    <p class="transfer-case-oil-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Differential Locks Function And
+                                        Condition
+                                    </p>
+                                    <p class="differential-locks-function-and-condition"></p>
+                                </div>
+
+
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Suspension</p>
+                        <div class="header-end">
+                            <p class="suspension-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="suspension-bg accordion-bg"></div>
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>Air Suspension Compressor Function And
+                                        Condition</p>
+                                    <p class="air-suspension-compressor-function-and-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Air Or Hydraulic Suspension Lines Condition</p>
+                                    <p class="air-or-hydraulic-suspension-lines-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Suspension Valve Block Function And
+                                        Condition</p>
+                                    <p class="suspension-valve-block-function-and-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Hydraulic Suspension Pump Function And
+                                        Condition
+                                    </p>
+                                    <p class="hydraulic-suspension-pump-function-and-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Hydraulic Suspension Oil Level And Condition</p>
+                                    <p class="hydraulic-suspension-oil-level-and-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>All Wheel Bearing Condition</p>
+                                    <p class="all-wheel-bearing-condition"></p>
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>OBD-Diagnostic Codes</p>
+                        <div class="header-end">
+                            <p class="obd-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="obd-bg accordion-bg"></div>
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>Mileage Modification</p>
+                                    <p class="no-mileage-modification"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Stored Messages On-Board Computer</p>
+                                    <p class="stored-messages-on-board-computer"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Service Due Data</p>
+                                    <p class="no-service-due-data"></p>
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="pt-1">Remarks:</p>
+                            <p class=" pt-025 pb-1 obd-remarks"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>AC System</p>
+                        <div class="header-end">
+                            <p class="ac-system-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="ac-bg accordion-bg"></div>
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>AC Gas Quantity</p>
+                                    <p class="ac-gas-quantity"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>AC Gas Quality
+                                    </p>
+                                    <p class="ac-gas-quality"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>AC Compressor Condition</p>
+                                    <p class="ac-compressor-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>AC Blower
+                                    </p>
+                                    <p class="ac-blower"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>AC Fan</p>
+                                    <p class="ac-fan"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Air Conditioning Components (Vent Blower
+                                        And Stratfication Control)</p>
+                                    <p class="air-conditioning-components-vents-blower-and-stratfication-control"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>AC Fault</p>
+                                    <p class="no-ac-fault"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>AC Control Unit Functionning Or
+                                        Condition
+                                    </p>
+                                    <p class="ac-control-unit-functionning-or-condition"></p>
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <p>Road Test and Final Checks</p>
+                        <div class="header-end">
+                            <p class="road-test-percentage-accordion"></p>
+                            <div class="header-arrow">
+                                <img src="./assets/down.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div></div>
+                        <div class="insp-wrapper pt-1">
+                            <div>
+                                <div class="insp-box">
+                                    <p>AC Perfomance</p>
+                                    <p class="ac-performance"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>4WD Operation</p>
+                                    <p class="fwd-operation"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Engine Performance</p>
+                                    <p class="engine-performance"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Suspension Performance
+                                    </p>
+                                    <p class="suspension-performance"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Drivability Condition
+                                    </p>
+                                    <p class="drivability-condition"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Instruments And Controls
+                                    </p>
+                                    <p class="instruments-and-controls"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Brake Operation
+                                    </p>
+                                    <p class="brake-operation"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Transmission Performance
+                                    </p>
+                                    <p class="transmission-performance"></p>
+                                </div>
+                                <div class="insp-box">
+                                    <p>Driver Assistance Systems
+                                    </p>
+                                    <p class="drive-assistance-system"></p>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <div class="insp-box">
+                                    <p>Tires
+                                    </p>
+                                    <p class="tires"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <section class="image-section">
+            <p class="sub-title">Inspection Images</p>
+            <div class="inspection-images-wrapper">
+                <div class="inspection-images">
+
+                    <div class="img-loading rotating">
+                        <img src="./assets/noun-loading-1609189-grey.png" alt="">
+                    </div>
+
+                    <div class="image-grid" id="images">
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <section>
+            <p class="sub-title">Inspection Summary</p>
+
+            <p class="pt-1 t-clr-1 overall-summary">
+
+            </p>
+
+            <p class="sub-title">Report Information</p>
+
+            <div class="ri-box pt-1">
+
+                <div class="ri-list">
+                    <div>
+                        <p class="inspection-num"></p>
+                        <p>Inspection No.</p>
+                    </div>
+                    <div>
+                        <p class="inspection-date"></p>
+                        <p>Inspection Date</p>
+                    </div>
+                    <div>
+                        <p class="service-advisor"></p>
+                        <p>Service Advisor</p>
+                    </div>
+                    <div>
+                        <p class="inspected-by"></p>
+                        <p>Inspected By</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="disclaimer-section">
+            <p class="sub-title">Disclaimer</p>
+
+            <p class="t-clr-1 pt-1">
+                The German Experts Inspection Report is a technical document that assesses the car's condition based
+                on the inspection team's findings and the Milage / Car history/Readings and data available to the
+                center during the inspection. It is important to note that the inspection results are just a
+                technical opinion and do not carry any legal or ethical responsibility for the seller, the buyer, or
+                the German Experts Center. The customer grants authorization to the German Experts in car maintenance to
+                perform the necessary
+                technical tests to prepare the pre-purchase report according to the terms and conditions established
+                by the German Experts. This authorization comes without imposing legal or ethical obligations on the
+                parties involved. Furthermore, the customer is responsible for covering the entire inspection fee,
+                irrespective of the
+                outcome of the final report or technical opinion.
+            </p>
+
+        </section>
+
+    </div>
+
+    <div class="copyright">
+        <p>Copyright <span class="curr-year"></span> © <a href="https://germanexperts.ae/" target="_blank">German
+                Experts Car Maintenance LLC</a>. All Rights Reserved </p>
+    </div>
+
+    <script src="./decimal.min.js"></script>
+    <script src="./crypto.js"></script>
+    <script src="./viewer.min.js"></script>
+    <script src="./app.v1.0.16.js"></script>
+</body>
+
+</html>
